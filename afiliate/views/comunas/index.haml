@@ -3,7 +3,7 @@
 %hr
 
 %dl.dl-horizontal
-- Comuna.all.each do |comuna|
+  - Comuna.all.each do |comuna|
 
-  %dt= link_to comuna.nombre, url_for(:comunas, :show, comuna.id)
-  %dd= comuna.barrios
+    %dt= link_to comuna.nombre, url_for(:comunas, :show, comuna.id)
+    %dd= comuna.barrios
