@@ -9,6 +9,7 @@ gem 'rake'
 gem 'sinatra-flash', :require => 'sinatra/flash'
 
 # Component requirements
+gem 'bcrypt-ruby', :require => "bcrypt"
 gem 'haml'
 gem 'dm-sqlite-adapter'
 gem 'dm-validations'
@@ -19,9 +20,11 @@ gem 'dm-aggregates'
 gem 'dm-core'
 
 # Test requirements
-gem 'mocha', :group => "test"
-gem 'minitest', "~>2.6.0", :require => "minitest/autorun", :group => "test"
-gem 'rack-test', :require => "rack/test", :group => "test"
+group :test do
+  gem 'mocha'
+  gem 'minitest', "~>2.6.0", :require => "minitest/autorun"
+  gem 'rack-test', :require => "rack/test"
+end
 
 # Padrino Stable Gem
 gem 'padrino', '0.10.7'
