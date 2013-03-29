@@ -6,7 +6,11 @@
     %title Partido Pirata - Afiliación
     %meta{name: "viewport", content: "width=device-width, initial-scale=1.0"}
 
-    = stylesheet_link_tag %w{bootstrap.min.css bootstrap-responsive.css layout.css}
+    %link{href: '/stylesheets/bootstrap.min.css',
+          media: 'screen', rel: 'stylesheet', type: 'text/css'}
+    %link{href: '/stylesheets/bootstrap-responsive.min.css',
+          media: 'screen', rel: 'stylesheet', type: 'text/css'}
+    = stylesheet_link_tag %w{layout.css}
 
   %body
     .container
