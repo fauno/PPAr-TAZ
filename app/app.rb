@@ -5,6 +5,10 @@ class Taz < Padrino::Application
 
   enable :sessions
 
+  get '/' do
+    render :haml, '%h1 TODO: mostrar la lista de proyectos/apps'
+  end
+
   ##
   # Caching support
   #
