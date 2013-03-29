@@ -32,3 +32,5 @@ end
 
 # Mounts the core application for this project
 Padrino.mount("Taz").to('/')
+
+Padrino.mount("Afiliate").to("/afiliate")
