@@ -7,9 +7,9 @@
 
   %p
     En este momento estamos en formación en la Ciudad Autónoma de Buenos Aires,
-    por lo que nos estamos organizando por Comunas.  Si te interesa participar en
-    el Partido, dejanos tus datos para que podamos organizar reuniones
-    comunales.
+    por lo que nos estamos organizando por #{link_to 'Comunas', url_for(:comunas, :index)}.
+    Si te interesa participar en el Partido, dejanos tus datos para que podamos
+    organizar reuniones comunales.
 
   %input.input-block-level{type: "text", name: "pirata[nombre]",
     placeholder: "Tu nick o nombre" }

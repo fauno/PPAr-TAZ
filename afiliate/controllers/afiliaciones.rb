@@ -12,7 +12,7 @@ Afiliate.controllers :afiliaciones do
   post :nueva do
     @pirata = Pirata.new(params[:pirata])
     if @pirata.save
-      redirect url(:comunas, :index, :id => @pirata.comuna)
+      redirect url(:comunas, :show, :id => @pirata.comuna)
     else
       flash[:error] = "Hubo un error al procesar tu afiliación, ¿completaste todos tus datos? Son pocos ;)"
       redirect url(:afiliaciones, :index)
