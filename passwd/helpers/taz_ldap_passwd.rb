@@ -10,8 +10,9 @@ Passwd.helpers do
 
     conn.bind("mail=#{username}@partidopirata.com.ar,ou=pirates,dc=PPAR.local", "#{current}")
 
-    changepw=[LDAP::Mod.new(LDAP::LDAP_MOD_REPLACE, 'userPassword', ["{SSHA}#{new}"]),]
+    changepw=[LDAP::Mod.new(LDAP::LDAP_MOD_REPLACE, 'userPassword', ["#{new}"]),]
 
+    # FIXME por qué no agarra LDAP::ResultError (Invalid credentials)
     begin
       conn.modify("mail=#{username}@partidopirata.com.ar,ou=pirates,dc=PPAR.local", changepw)
       @return = true
