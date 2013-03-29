@@ -8,6 +8,9 @@ source :rubygems
 gem 'rake'
 gem 'sinatra-flash', :require => 'sinatra/flash'
 
+# Passwd
+gem 'ruby-ldap'
+
 # Component requirements
 gem 'bcrypt-ruby', :require => "bcrypt"
 gem 'haml'

@@ -1,0 +1,23 @@
+-# encoding: utf-8
+%form.form-signin{action: url_for(:update), method: "post"}
+
+  %img{src: "http://partidopirata.com.ar/wp-content/uploads/2009/11/logo.png"}
+  %h2.form-signin-heading Cambiar contraseña
+
+  %input.input-block-level{ type: "text",
+                            name: "user",
+                            placeholder: "Usuario/a"}
+
+  %input.input-block-level{ type: "password",
+                            name: "current",
+                            placeholder: "Contraseña actual"}
+
+  %input.input-block-level{ type: "password",
+                            name: "new",
+                            placeholder: "Contraseña nueva"}
+
+  %input.input-block-level{ type: "password",
+                            name: "new_compare",
+                            placeholder: "Repetir"}
+
+  %button.btn.btn-large.btn-primary{type: "submit"} Cambiar
