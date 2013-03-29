@@ -1,0 +1,30 @@
+-# encoding: utf-8
+%form#afiliacion{:method => "post", :action => action, 'accept-charset' => 'utf-8'}
+
+  %legend
+    %img{src: "http://partidopirata.com.ar/wp-content/uploads/2009/11/logo.png"}
+    Afiliate al Partido Pirata de Argentina
+
+  %p
+    En este momento estamos en formación en la Ciudad Autónoma de Buenos Aires,
+    por lo que nos estamos organizando por Comunas.  Si te interesa participar en
+    el Partido, dejanos tus datos para que podamos organizar reuniones
+    comunales.
+
+  %input.input-block-level{type: "text", name: "pirata[nombre]",
+    placeholder: "Tu nick o nombre" }
+
+  %input.input-block-level{type: "text", name: "pirata[mail]",
+    placeholder: "Dirección de email"}
+
+  %select#comuna.input-block-level{name: "pirata[comuna]"}
+    - comunas.each do |comuna|
+      %option{value: comuna.id}= comuna.nombre
+
+  %p
+    %small
+      Al completar estos datos, entendemos que tenés interés en participar de
+      nuestras actividades y eventualmente convertirte en Pirata.  ¡Necesitamos
+      4000 piratas sólo en CABA!
+
+  %button.btn.btn-large.btn-primary{type: 'submit'} ¡Soy pirata!
