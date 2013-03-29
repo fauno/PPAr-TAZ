@@ -34,3 +34,4 @@ end
 Padrino.mount("Taz").to('/')
 
 Padrino.mount("Afiliate").to("/afiliate")
+Padrino.mount("Passwd").to("/passwd")
