@@ -34,7 +34,7 @@ Passwd.controllers  do
 
   get '/success' do
     render 'passwd/message', :locals => {
-      type: "error",
+      type: "success",
       title: "WIN!",
       message: "Ahora podés usar tu contraseña nueva."
     }
