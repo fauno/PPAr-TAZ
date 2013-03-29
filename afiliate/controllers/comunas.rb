@@ -1,7 +1,7 @@
 # encoding: utf-8
 Afiliate.controllers :comunas do
 
-  get :ver, :with => :id do
+  get :show, with: :id do
     @comuna  = Comuna.get(params[:id])
     @piratas = Pirata.count(:comuna => @comuna.id)
 
@@ -24,5 +24,9 @@ Afiliate.controllers :comunas do
       :conclusion => @conclusion
     }
   end
-  
+
+  get :index do
+    render 'comunas/index'
+  end
+
 end

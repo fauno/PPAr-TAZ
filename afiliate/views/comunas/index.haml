@@ -1,0 +1,9 @@
+-# encoding: utf-8
+%h1 ¿En qué comuna estás?
+%hr
+
+%dl.dl-horizontal
+- Comuna.all.each do |comuna|
+
+  %dt= link_to comuna.nombre, url_for(:comunas, :show, comuna.id)
+  %dd= comuna.barrios
