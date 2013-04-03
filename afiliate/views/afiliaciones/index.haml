@@ -20,7 +20,7 @@
 
   %select#comuna.input-block-level{name: "pirata[comuna]"}
     - comunas.each do |comuna|
-      %option{value: comuna.id}= comuna.nombre - comuna.barrios
+      %option{value: comuna.id}= "#{comuna.nombre} - #{comuna.barrios}"
 
   %p
     %small
