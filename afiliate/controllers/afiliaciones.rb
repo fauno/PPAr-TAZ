@@ -3,8 +3,11 @@ Afiliate.controllers :afiliaciones do
 
   get :index do
     @comunas = Comuna.all(:order => "id")
+    @piratas = Piratas.count()
+
     render "afiliaciones/index", :locals => {
       :comunas => @comunas,
+      :piratas => @piratas
       :action => url(:afiliaciones, :nueva)
     }
   end
