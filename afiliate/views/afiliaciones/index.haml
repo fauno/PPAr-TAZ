@@ -3,14 +3,15 @@
 
   %legend
     %img{src: "http://partidopirata.com.ar/wp-content/uploads/2009/11/logo.png"}
-    %h1 Afiliate al Partido Pirata de Argentina
+    %h1 Sumate al Partido Pirata
 
+  %h2 ¡Faltan #{4000 - @piratas} piratas sólo en CABA!
 
   %p
     En este momento estamos en formación en la Ciudad Autónoma de Buenos Aires,
     por lo que nos estamos organizando por #{link_to 'Comunas', url_for(:comunas, :index)}.
     Si te interesa participar en el Partido, dejanos tus datos para que podamos
-    organizar reuniones comunales.
+    organizar reuniones comunales y avisarte cuando juntemos las adhesiones y afiliaciones.
 
   %input.input-block-level{type: "text", name: "pirata[nombre]",
     placeholder: "Tu nick o nombre" }
@@ -25,13 +26,20 @@
   %p
     %small
       Al completar estos datos, entendemos que tenés interés en participar de
-      nuestras actividades y eventualmente convertirte en Pirata.  
+      nuestras actividades y eventualmente convertirte en Pirata.
 
-  %h2 ¡Faltan #{4000 - @piratas} piratas sólo en CABA!
+  %p
+    %small
+      Si queres saber mas del partido aca podes leer nuestra
+      %a{href: "http://ompldr.org/vaTRxZg/CartaOrganica.html"} Carta Orgánica
+      y nuestros
+      %a{href: "http://partidopirata.com.ar/principios-piratas/"} principios
+      .
 
   %p 
     %small 
-      Si queres crearlo en otro lado unite a las 
-      %a{href: "http://asambleas.partidopirata.com.ar"} asambleas
+      Si queres crearlo el partido en otro lado o debatir online  unite a la
+      %a{href: "http://asambleas.partidopirata.com.ar/listinfo/general"} asamblea
+      .
 
   %button.btn.btn-large.btn-primary{type: 'submit'} ¡Soy pirata!
