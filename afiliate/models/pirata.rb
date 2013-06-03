@@ -5,6 +5,6 @@ class Pirata
   # property <name>, <type>
   property :id, Serial
   property :nombre, String
-  property :mail, String
+  property :mail, String, :format => :email_address
   property :comuna, Integer
 end
